@@ -10,6 +10,6 @@ run: venv/bin/activate
 	FLASK_APP=app.py python3 -m flask run --host=0.0.0.0
 
 .PHONY: run_production
-run_gunicorn: venv/bin/activate
-	. venv/bin/activate ; \
+run_production:
+	# environment will already be configured with requirements
 	gunicorn app:app
